@@ -11,10 +11,6 @@ const routes: Routes = [
   {
     path:'',pathMatch:'full', redirectTo:'inicio'
   },
-  //Cualquier otra ruta va redireccionar a Inicio
-  {
-    path:'**', redirectTo:'inicio'
-  },
   {
     path:'inicio', component:InicioComponent
   },
@@ -32,6 +28,10 @@ const routes: Routes = [
   },
   {
     path:'vacantes', component:VacantesComponent
+  },
+  //Cualquier otra ruta va redireccionar a Inicio
+  {
+    path:'**', redirectTo:'inicio'
   }
 ];
 

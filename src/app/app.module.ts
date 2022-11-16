@@ -9,6 +9,8 @@ import { VacantesComponent } from './vacantes/vacantes.component';
 import { PostulacionesComponent } from './postulaciones/postulaciones.component';
 import { EmpresasComponent } from './empresas/empresas.component';
 import { AdminComponent } from './admin/admin.component';
+// Creamos importación del modulo para usarlo en app.module
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { AdminComponent } from './admin/admin.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
