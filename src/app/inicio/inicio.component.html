@@ -1,1 +1,22 @@
 <p>inicio works!</p>
+
+
+<div *ngIf="datos!=null; else noHayDatos">
+    <table class="table__exercise">
+      <tr>
+        <th>NIT</th>
+        <th>EMPRESA</th>
+      </tr>
+
+      <!--Directiva que me ayudan a recorrer los datos-->
+      <tr *ngFor="let row of datos">
+        <td>{{ row.nit }}</td>
+        <td>{{ row.nombre }}</td>
+      </tr>
+    </table>
+</div>
+
+
+<ng-template #noHayDatos>
+  No hay datos para mostrar
+</ng-template>
